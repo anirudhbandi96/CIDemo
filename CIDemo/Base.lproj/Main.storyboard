@@ -29,12 +29,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFz-Iq-0gM">
-                                <rect key="frame" x="152" y="513" width="111" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFz-Iq-0gM">
+                                <rect key="frame" x="151.5" y="513" width="111" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bHU-91-c3V"/>
+                                </constraints>
                                 <state key="normal" title="Show New Page"/>
                                 <connections>
                                     <segue destination="4SA-wd-dXO" kind="show" id="HBb-6g-5pt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvs-LD-0Y1">
+                                <rect key="frame" x="156" y="551" width="102" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ggz-e2-70d"/>
+                                </constraints>
+                                <state key="normal" title="Second Button"/>
+                                <connections>
+                                    <segue destination="Ye9-yj-atj" kind="show" id="eC5-fK-cTu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -42,8 +54,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iEc-Qa-VoU" secondAttribute="bottom" constant="20" id="2iX-o6-34R"/>
+                            <constraint firstItem="dFz-Iq-0gM" firstAttribute="top" secondItem="3cR-2T-jFY" secondAttribute="bottom" constant="44.5" id="B7f-fl-IOu"/>
+                            <constraint firstItem="dFz-Iq-0gM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="chF-Ms-0xG"/>
+                            <constraint firstItem="vvs-LD-0Y1" firstAttribute="centerX" secondItem="dFz-Iq-0gM" secondAttribute="centerX" id="ecg-KQ-fEH"/>
                             <constraint firstItem="iEc-Qa-VoU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jmu-X9-Oh6"/>
                             <constraint firstItem="3cR-2T-jFY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kH6-M9-Ydl"/>
+                            <constraint firstItem="vvs-LD-0Y1" firstAttribute="top" secondItem="dFz-Iq-0gM" secondAttribute="bottom" constant="8" symbolic="YES" id="rEP-Q2-eGV"/>
                             <constraint firstItem="3cR-2T-jFY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xAT-WQ-x3b"/>
                         </constraints>
                     </view>
@@ -79,6 +95,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iEt-e0-tmN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="850" y="108"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gwm-qf-5fZ">
+            <objects>
+                <viewController id="Ye9-yj-atj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lLz-9r-uCV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkL-qI-1Az">
+                                <rect key="frame" x="77.5" y="394" width="259.5" height="54"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="puf-gq-jUj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FkL-qI-1Az" firstAttribute="centerY" secondItem="lLz-9r-uCV" secondAttribute="centerY" id="Hxo-oG-fto"/>
+                            <constraint firstItem="FkL-qI-1Az" firstAttribute="centerX" secondItem="lLz-9r-uCV" secondAttribute="centerX" id="ToJ-YO-YZT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="C1L-9a-6VS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcL-By-LWI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="798"/>
         </scene>
     </scenes>
     <resources>
